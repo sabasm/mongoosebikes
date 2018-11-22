@@ -1,0 +1,13 @@
+<div>
+    <form action="">
+        <input type="text" name="search">
+        <input type="submit" buscar>
+    </form>
+
+    <a href="/bikes?withCasco=true">Con casco</a>
+    <a href="/bikes?withCasco=false">Sin casco</a>
+
+    {{#each bikes}}
+        <a href="/bikes/{{this._id}}">{{this.modelo}}</a>
+    {{/each}}
+</div>
