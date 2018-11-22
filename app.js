@@ -1,11 +1,14 @@
 const express = require('express')
 const hbs = require('hbs')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 
 //connect db
 mongoose.connect('mongodb://localhost/mongoosebikes')
 //app
 const app = express()
+//bodyparser
+app.use(bodyParser.urlencoded({ extended: true }));
 //statics
 app.use(express.static('public'))
 //views
